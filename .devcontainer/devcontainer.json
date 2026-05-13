@@ -1,0 +1,14 @@
+{
+  "name": "PHP Dev",
+  "image": "mcr.microsoft.com/devcontainers/php:1-8.2-bullseye",
+  "containerEnv": {
+    "XDEBUG_MODE": "off"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "neilbrayfield.php-docblocker"
+      ]
+    }
+  }
+}
