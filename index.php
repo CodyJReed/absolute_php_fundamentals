@@ -1,46 +1,26 @@
 <?php
-/*
-| Arithmetic Operators
-| Operator | Description    |
-| -------- | -------------- |
-| `+`      | Addition       |
-| `-`      | Subtraction    |
-| `*`      | Multiplication |
-| `/`      | Division       |
-| `%`      | Modulus        |
-*/
 $output = null;
-
-$num1 = 20;
-$num2 = 3;
-
-$output = "$num1 + $num2 = " . $num1 + $num2;
-$output = "$num1 - $num2 = " . $num1 - $num2;
-$output = "$num1 * $num2 = " . $num1 * $num2;
-$output = "$num1 % $num2 = " . $num1 % $num2;
-$output = $num1 += 1;
-$output = rand();
-$output = getrandmax();
-$output = rand(1, 10);
-// round
-$output = round(4.4);
-// ceil
-$output = ceil(4.1);
-// floor
-$output = floor(4.9);
-// sqrt
-$output = sqrt(81);
-// pi
-$output = pi();
-// abs
-$output = abs(-4.9);
-// max()
-$output = max([1,4,9,150]);
-// min
-$output = min([1,4,9,150]);
-// Awesome for currency formatting
-$output = number_format(1234567.191234, 2, '.', ',');
+$string = 'Hello World';
+// string length
+$output = strlen($string);
+// Word count
+$output = str_word_count($string);
+// string position
+$output = strpos($string, 'World');
+// Substring
+$output = substr($string, 6, 5);
+// String replace
+$output = str_replace('World', 'Universe', $string);
+// string to lowercase
+$output = strtolower($string);
+// string to uppercase
+$output = strtoupper($string);
+// Capitalize string
+$output = ucwords($string);
+// trim whitespace
+$output = trim('     Hello World    ');
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,12 +39,7 @@ $output = number_format(1234567.191234, 2, '.', ',');
   </header>
   <div class="container mx-auto p-4 mt-4">
     <div class="bg-white rounded-lg shadow-md p-6 mt-6">
-      <!-- Output -->
-      <p class="text-xl">
-        <?=
-        $output
-        ?>
-      </p>
+      <p class="text-xl"><?= $output ?></p>
     </div>
   </div>
 </body>
