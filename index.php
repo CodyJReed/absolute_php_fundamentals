@@ -1,32 +1,49 @@
 <?php
-$array = [1, 2, 'jim'];
-
-for ($i = 0; $i < count($array); $i++) {
-    echo  "Current index: $i, Value: " . $array[$i] . "\n";
+// Nested looping
+for ($i = 0; $i < 5; $i++) {
+  for ($j = 0; $j < 5; $j++) {
+    echo $i . ' _ ' . $j . '<br>';
+  }
 }
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>PHP From Scratch</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nested Loops & CSS Grid Example</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(5, 50px);
+      /* Create 5 columns, each 50px wide */
+      grid-gap: 5px;
+      /* Add some spacing between grid items */
+      margin-top: 16px;
+    }
+
+    .grid-item {
+      width: 50px;
+      height: 50px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 50px;
+    }
+  </style>
 </head>
 
-<body class="bg-gray-100">
-    <header class="bg-blue-500 text-white p-4">
-        <div class="container mx-auto">
-            <h1 class="text-3xl font-semibold">PHP From Scratch</h1>
+<body>
+  <div class="grid-container">
+    <?php for ($i = 0; $i < 5; $i++): ?>
+      <?php for ($j = 0; $j < 5; $j++): ?>
+        <div class="grid-item">
+          <?= $i . ' - ' . $j ?>
         </div>
-    </header>
-    <div class="container mx-auto p-4 mt-4">
-        <div class="bg-white rounded-lg shadow-md p-6 mt-6">
-            <!-- Output -->
-        </div>
-    </div>
+      <?php endfor ?>
+    <?php endfor ?>
+  </div>
 </body>
 
 </html>
