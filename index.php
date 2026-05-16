@@ -1,20 +1,9 @@
 <?php
-$output = null;
+$array = [1, 2, 'jim'];
 
-$numbers = [0,1,2,3,4];
-$sum = array_sum($numbers);
-$count = count($numbers);
-
-$output = "The sum of the {$count} numbers is : {$sum}";
-
-$colors = ['yellow', 'cyan', 'pink', 'blue'];
-rsort($colors);
-array_push($colors, 'purple');
-array_push($colors, 'orange');
-$colors[1] = 'pink';
-array_pop($colors);
-
-var_dump($colors);
+for ($i = 0; $i < count($array); $i++) {
+    echo  "Current index: $i, Value: " . $array[$i] . "\n";
+}
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +25,6 @@ var_dump($colors);
     <div class="container mx-auto p-4 mt-4">
         <div class="bg-white rounded-lg shadow-md p-6 mt-6">
             <!-- Output -->
-            <p class="text-xl"><?= $output ?></p>
         </div>
     </div>
 </body>
