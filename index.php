@@ -1,14 +1,7 @@
 <?php
 
-$numbers = array(1, 2, 3, 4, 5);
-$cb = function ($number) {
-return $number * $number;
-};
+$base = 32;
 
-$squaredNumbers = array_map($cb, $numbers);
+$fToC = fn (int $f) => $f. "F = " .($f - $base) * (5 / 9) . "C";
 
-$add = fn ($a, $b) => $a + $b;
-
-$sum = $add(2, 3);
-
-echo $sum;
+echo $fToC(31);
