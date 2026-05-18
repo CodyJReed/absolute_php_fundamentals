@@ -84,3 +84,23 @@ $circle = new Circle('circle', 5);
 echo '<br>';
 var_dump($circle);
 
+interface ProtectedAbstract {
+    public function doTheThing();
+}
+
+class Planet implements ProtectedAbstract {
+        public $thing;
+
+        public function __construct($thing)
+        {
+            $this->thing = $thing;
+        }
+
+        public function doTheThing() {
+            return $this->thing;
+        }
+}
+
+$booger = new Planet('Venus');
+
+echo $booger->doTheThing();
