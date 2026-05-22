@@ -43,6 +43,13 @@ $post = $stmt->fetch();
           <a href="index.php">Go Back</a>
         </div>
       </div>
+      <form action="delete.php" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="hidden" name="id" value="<?= $post['id'] ?>">
+        <button type="submit" name="submit" class="mt-6 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 focus:outline-node">
+          Delete
+        </button>
+      </form>
     </div>
   </div>
 </body>
