@@ -43,6 +43,8 @@ $post = $stmt->fetch();
           <a href="index.php">Go Back</a>
         </div>
       </div>
+      <div class="flex gap-2">
+      <a href="edit.php?id=<?= $post['id'] ?>" class="inline-block mt-6 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-node">Edit Post</a>
       <form action="delete.php" method="post">
         <input type="hidden" name="_method" value="delete">
         <input type="hidden" name="id" value="<?= $post['id'] ?>">
@@ -50,6 +52,7 @@ $post = $stmt->fetch();
           Delete
         </button>
       </form>
+      </div>
     </div>
   </div>
 </body>
